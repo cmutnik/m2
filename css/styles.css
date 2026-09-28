@@ -161,22 +161,10 @@ p {
   text-decoration: none;
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--color-primary);
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.1rem;
-}
-
-.logo-mark sup {
-  font-size: 0.65em;
-  color: var(--color-accent);
+.logo-image {
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -419,6 +407,10 @@ section {
   gap: 24px;
 }
 
+.value-list-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .value-item {
   display: flex;
   gap: 16px;
@@ -631,6 +623,10 @@ section {
   }
 
   .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-list-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 

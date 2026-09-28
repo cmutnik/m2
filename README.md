@@ -73,7 +73,7 @@ Open `team.html`. Each team member is one block that looks like this:
   <div class="avatar" style="background:#0b2545;">JB</div>
   <h3>Jordan Blake</h3>
   <span class="team-role">Founder &amp; Principal Consultant</span>
-  <p>15+ years leading HR functions for fast-growing companies...</p>
+  <p>10+ years leading HR functions for fast-growing companies...</p>
 </div>
 ```
 

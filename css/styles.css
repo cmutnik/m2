@@ -463,6 +463,68 @@ section {
   margin: 0;
 }
 
+/* ---------- Founder bio ---------- */
+
+.founder-card {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+}
+
+.founder-avatar {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.founder-role {
+  display: block;
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.founder-card h3 {
+  margin-bottom: 4px;
+}
+
+.founder-card p {
+  margin: 0 0 12px;
+}
+
+.founder-credentials {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.founder-credentials li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.founder-credentials li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-dark);
+}
+
 /* ---------- Flow diagram ---------- */
 
 .flow-diagram {
@@ -689,6 +751,11 @@ section {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .founder-card {
+    flex-direction: column;
+    text-align: center;
   }
 }
 

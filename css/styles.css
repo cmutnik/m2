@@ -161,22 +161,10 @@ p {
   text-decoration: none;
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--color-primary);
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.1rem;
-}
-
-.logo-mark sup {
-  font-size: 0.65em;
-  color: var(--color-accent);
+.logo-image {
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -384,6 +372,28 @@ section {
   transform: translateY(-4px);
 }
 
+.card-featured {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent), var(--shadow-sm);
+}
+
+.card-featured:hover {
+  box-shadow: 0 0 0 1px var(--color-accent), var(--shadow-md);
+}
+
+.card-tag {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3em 0.8em;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
 .card-icon {
   width: 48px;
   height: 48px;
@@ -419,6 +429,10 @@ section {
   gap: 24px;
 }
 
+.value-list-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .value-item {
   display: flex;
   gap: 16px;
@@ -449,36 +463,129 @@ section {
   margin: 0;
 }
 
-/* ---------- Team ---------- */
+/* ---------- Founder bio ---------- */
 
-.team-card {
-  text-align: center;
-  padding: 32px 24px;
+.founder-card {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
 }
 
-.avatar {
+.founder-avatar {
+  flex-shrink: 0;
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  margin: 0 auto 20px;
+  background: var(--color-primary);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.4rem;
-  color: #ffffff;
+  font-size: 1.5rem;
 }
 
-.team-card h3 {
-  margin-bottom: 2px;
-}
-
-.team-role {
+.founder-role {
+  display: block;
   color: var(--color-accent-dark);
   font-weight: 600;
   font-size: 0.9rem;
-  margin-bottom: 14px;
-  display: block;
+  margin-bottom: 12px;
+}
+
+.founder-card h3 {
+  margin-bottom: 4px;
+}
+
+.founder-card p {
+  margin: 0 0 12px;
+}
+
+.founder-credentials {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.founder-credentials li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.founder-credentials li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-dark);
+}
+
+/* ---------- Flow diagram ---------- */
+
+.flow-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.flow-diagram-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-accent-dark);
+}
+
+.flow-arc {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.flow-bubble {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  transform: translate(-50%, -50%);
+}
+
+.flow-bubble-top {
+  left: 50%;
+  top: 10%;
+}
+
+.flow-bubble-right {
+  left: 90%;
+  top: 50%;
+}
+
+.flow-bubble-bottom {
+  left: 50%;
+  top: 90%;
+}
+
+.flow-bubble-left {
+  left: 10%;
+  top: 50%;
 }
 
 /* ---------- CTA banner ---------- */
@@ -634,12 +741,21 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .value-list-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .founder-card {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -673,6 +789,16 @@ section {
   .value-list,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .flow-diagram {
+    max-width: 280px;
+  }
+
+  .flow-bubble {
+    width: 84px;
+    height: 84px;
+    font-size: 0.8rem;
   }
 
   .cta-banner {

@@ -26,7 +26,6 @@ That's it — the site is live. Any time you save a change to a file (see below)
 | `index.html` | The Home page |
 | `services.html` | The Services page |
 | `about.html` | The About page |
-| `team.html` | The Team page |
 | `contact.html` | The Contact page |
 | `404.html` | The page shown if a visitor follows a broken link |
 | `css/styles.css` | Controls colors, fonts, and layout for the whole site |
@@ -63,27 +62,7 @@ This appears in **two places on every page**: the footer near the bottom, and th
 - `(555) 555-1234`
 - `123 Main Street, Suite 400`
 
-Replace each instance with the real information. Because this appears on every page, you'll need to repeat the change in `index.html`, `services.html`, `about.html`, `team.html`, `contact.html`, and `404.html`.
-
-### Update the Team page
-Open `team.html`. Each team member is one block that looks like this:
-
-```html
-<div class="card team-card">
-  <div class="avatar" style="background:#0b2545;">JB</div>
-  <h3>Jordan Blake</h3>
-  <span class="team-role">Founder &amp; Principal Consultant</span>
-  <p>15+ years leading HR functions for fast-growing companies...</p>
-</div>
-```
-
-- Change `JB` to the person's initials, `Jordan Blake` to their name, the role text, and the bio.
-- To add a real photo instead of the colored initials circle, replace the `<div class="avatar" ...>JB</div>` line with:
-  ```html
-  <img src="assets/team/jordan-blake.jpg" alt="Jordan Blake" class="avatar" style="object-fit:cover;">
-  ```
-  Upload the photo into a new `assets/team/` folder first (you can create folders when uploading files on GitHub).
-- Copy/paste an entire block to add a new team member, or delete a block to remove one.
+Replace each instance with the real information. Because this appears on every page, you'll need to repeat the change in `index.html`, `services.html`, `about.html`, `contact.html`, and `404.html`.
 
 ### Update Services
 Open `services.html`. Each service is a `<div class="card">...</div>` block with an icon, a heading (`<h3>`), and a description (`<p>`). Edit the heading and paragraph text directly.
